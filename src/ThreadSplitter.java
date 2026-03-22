@@ -21,6 +21,7 @@ public class ThreadSplitter<T>{
             this.threads[i] = new Thread(runnable[i]);
             this.threads[i].start();
         }
+
         for(int i = 0; i < this.threadCount; i++){
             try {
                 threads[i].join();
